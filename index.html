@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Portfolio Template</title>
+
+    <link rel="stylesheet" href="css/output.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<style>
+    body {
+        font-family: "Fraunces", sans-serif;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <div class="fixed top-0 left-0 w-full border-b border-[#0e1320] backdrop-blur-2xl z-50">
+        <div class="container mx-auto w-full lg:w-5xl flex justify-between items-center p-4">
+            <h1 class="text-3xl text-white font-extrabold">
+                Editor
+            </h1>
+
+            <div id="nav-items" class="md:flex items-center gap-8 hidden md:block"></div>
+
+            <button id="open-navBar" class="md:hidden">
+                <i class="fa-solid fa-bars text-xl text-white"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-navBar"
+        class="fixed top-0 left-0 w-full bg-[#101116] border-b border-[#151e35] z-50 flex flex-col gap-6 p-4 pb-6 translate-x-full duration-300 md:hidden">
+        <button id="close-navBar" class="text-end">
+            <i class="fa-solid fa-xmark text-xl text-white"></i>
+        </button>
+        <div class="flex flex-col items-center gap-6">
+            <a href="#Home" class="text-4xl text-white">Home</a>
+            <a href="#Work" class="text-4xl text-white">Work</a>
+            <a href="#About" class="text-4xl text-white">About</a>
+            <a href="#Services" class="text-4xl text-white">Services</a>
+            <a href="#Contact" class="text-4xl text-white">Contact</a>
+        </div>
+    </div>
+
+    <section id="Home" class="w-full h-screen bg-linear-to-b from-[#07090d] via-[#0e1320] to-[#101116] pt-10 sm:pt-0">
+        <div class="container mx-auto p-4 w-full lg:w-5xl h-full flex flex-col justify-center gap-20">
+            <h1 class="text-6xl lg:text-9xl text-white font-extrabold">
+                I don’t cut. <br>
+                <span class="bg-indigo-500 px-3 rounded-md sm:rounded-2xl">I craft</span>
+            </h1>
+            <h2 class="text-2xl text-white/50">Turning ideas into timeless designs</h2>
+
+            <div class="flex gap-10 sm:gap-20">
+                <div class="flex flex-col">
+                    <span class="text-white text-4xl lg:text-6xl font-bold uppercase">8+</span>
+                    <span class="text-white/50 text-lg lg:text-xl font-extralight uppercase">years</span>
+                </div>
+
+                <div class="flex flex-col">
+                    <span class="text-white text-4xl lg:text-6xl font-bold uppercase">200+</span>
+                    <span class="text-white/50 text-lg lg:text-xl font-extralight uppercase">projects</span>
+                </div>
+
+                <div class="flex flex-col">
+                    <span class="text-white text-4xl lg:text-6xl font-bold uppercase">50+</span>
+                    <span class="text-white/50 text-lg lg:text-xl font-extralight uppercase">clients</span>
+                </div>
+            </div>
+
+            <a href="#" class="w-fit flex items-center gap-8 bg-indigo-500 px-8 py-4 rounded-xl group" style="box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);">
+                <span class="text-white">View My Work</span>
+                <span class="material-symbols-outlined text-white group-hover:translate-x-2 duration-200">
+                    arrow_right_alt
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <section id="Work" class="w-full min-h-screen bg-[#101116] py-20">
+        <div class="container mx-auto p-4 w-full lg:w-5xl h-full flex flex-col gap-36">
+            <div class="space-y-10">
+                <h1 class="text-6xl text-center text-white font-extrabold">
+                    Selected
+                    <span class="bg-indigo-500 px-3 rounded-md sm:rounded-xl">Work</span>
+                </h1>
+
+                <p class="text-white/50 text-xl text-center">A curated selection of visual stories crafted with
+                    precision, emotion, and intent.</p>
+            </div>
+
+            <div class="videos flex flex-col gap-20 lg:gap-36"></div>
+        </div>
+    </section>
+
+    <div id="overlay"
+        class="fixed inset-0 w-full h-screen bg-black/80 z-50 p-4 flex justify-center items-center hidden">
+        <button data-close-overlay-btn
+            class="absolute top-0 right-0 w-10 h-10 bg-black rounded-full m-4 cursor-pointer">
+            <i class="fa-solid fa-xmark text-white text-lg"></i>
+        </button>
+        <div class="w-full xl:w-7xl rounded-2xl overflow-hidden">
+            <video data-overlay-video>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <section id="About" class="w-full bg-[#101116] py-20 flex flex-col items-center gap-36">
+        <div class="container mx-auto p-4 w-full lg:w-5xl grid grid-cols-1 lg:grid-cols-2 gap-20">
+            <div
+                class="relative w-full h-full bg-[#0e1320] flex justify-center items-center rounded-2xl overflow-hidden">
+                <img src="images/picture.jpg" alt="my picture" class="grayscale hover:grayscale-0 duration-1000">
+                <div class="absolute bottom-0 left-0 m-4 flex flex-col gap-2">
+                    <span
+                        class="w-fit border border-indigo-500/50 backdrop-blur-sm px-3 py-[3px] rounded-full text-white uppercase">
+                        Full Name
+                    </span>
+                    <span
+                        class="w-fit border border-indigo-500/50 backdrop-blur-sm px-3 py-[3px] rounded-full text-white uppercase">
+                        +8 Years
+                    </span>
+                </div>
+            </div>
+            <div class="flex flex-col gap-14">
+                <h1 class="text-3xl font-extrabold text-white">
+                    Precision defines my work.
+                    Emotion drives every decision. I don’t assemble clips —
+                    <span
+                        class="bg-linear-to-r from-indigo-500 via-indigo-300 to-indigo-600  bg-clip-text text-transparent px-3 rounded-md sm:rounded-2xl">
+                        I shape experiences.
+                    </span>
+                </h1>
+
+                <p class="text-white/50 leading-8">
+                    I believe powerful stories aren’t found — they’re built.
+                    Through careful pacing and deliberate detail, I transform scattered moments into cohesive narratives
+                    that feel effortless, yet intentional.
+                </p>
+
+                <p class="text-white/50 leading-8">
+                    My approach blends precision with instinct.
+                    I study rhythm, emotion, and flow to ensure every project doesn’t just look refined — it feels
+                    unforgettable.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Services" class="w-full bg-[#101116] py-20">
+        <div class="container mx-auto p-4 w-full lg:w-5xl flex flex-col gap-28">
+            <div class="space-y-10">
+                <h1 class="text-6xl text-center text-white font-extrabold">
+                    Services
+                </h1>
+
+                <p class="text-white/50 text-xl text-center">
+                    Beyond service, we deliver moments of impact — meticulously designed, deeply felt, and flawlessly
+                    executed.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="p-[1px] bg-linear-to-br from-indigo-500 via-indigo-200 to-indigo-900 rounded-2xl">
+                    <div class="w-full bg-[#0e1320] rounded-2xl p-8 space-y-10">
+                        <h1 class="text-2xl text-white font-bold">Cinematic Editing</h1>
+                        <ul class="space-y-4">
+                            <li class="text-white/70 leading-8">• Craft visually driven narratives</li>
+                            <li class="text-white/70 leading-8">• Shape rhythm and emotion</li>
+                            <li class="text-white/70 leading-8">• Transform raw footage into structured impact</li>
+                            <li class="text-white/70 leading-8">• Deliver refined, intentional storytelling</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="p-[1px] bg-linear-to-br from-indigo-500 via-indigo-200 to-indigo-900 rounded-2xl">
+                    <div class="w-full bg-[#0e1320] rounded-2xl p-8 space-y-10">
+                        <h1 class="text-2xl text-white font-bold">Motion Graphics & VFX</h1>
+                        <ul class="space-y-4">
+                            <li class="text-white/70 leading-8">• Design dynamic visual layers</li>
+                            <li class="text-white/70 leading-8">• Integrate seamless animations</li>
+                            <li class="text-white/70 leading-8">• Enhance storytelling through motion</li>
+                            <li class="text-white/70 leading-8">• Add subtle yet powerful visual depth</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="p-[1px] bg-linear-to-br from-indigo-500 via-indigo-200 to-indigo-900 rounded-2xl">
+                    <div class="w-full bg-[#0e1320] rounded-2xl p-8 space-y-10">
+                        <h1 class="text-2xl text-white font-bold">Color Grading & Sound Design</h1>
+                        <ul class="space-y-4">
+                            <li class="text-white/70 leading-8">• Build atmosphere through color</li>
+                            <li class="text-white/70 leading-8">• Balance tone and visual harmony</li>
+                            <li class="text-white/70 leading-8">• Refine audio for immersive clarity</li>
+                            <li class="text-white/70 leading-8">• Ensure every frame feels cinematic</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Contact" class="w-full h-screen bg-[#101116] py-20">
+        <div class="container mx-auto p-4 w-full lg:w-5xl h-full flex flex-col justify-center items-center gap-28">
+            <div class="space-y-10">
+                <h1 class="text-6xl text-center text-white font-extrabold">
+                    Drop a
+                    <span class="bg-indigo-500 px-3 rounded-md sm:rounded-md">
+                        line
+                    </span>
+                </h1>
+            </div>
+
+            <div class="w-full flex justify-center">
+                <form action="" class="w-full md:w-lg flex flex-col gap-8">
+                    <div class="relative w-full group">
+                        <input type="text" id="full-name"
+                            class="peer w-full px-4 pt-8 pb-3 rounded-2xl border border-indigo-500/30 bg-transparent text-white outline-none focus:border-indigo-400 transition-all duration-300 placeholder-transparent"
+                            placeholder=" " />
+
+                        <label for="full-name"
+                            class="absolute left-4 text-white/60 text-base transition-all duration-300 origin-[0] peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-base peer-placeholder-shown:text-white/50 peer-not-placeholder-shown:top-3 peer-not-placeholder-shown:-translate-y-0 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-indigo-400 peer-focus:top-3 peer-focus:-translate-y-0 peer-focus:text-sm peer-focus:text-indigo-400 pointer-events-none">
+                            Full Name
+                        </label>
+                    </div>
+
+                    <div class="relative w-full group">
+                        <input type="email" id="email"
+                            class="peer w-full px-4 pt-8 pb-3 rounded-2xl border border-indigo-500/30 bg-transparent text-white outline-none focus:border-indigo-400 transition-all duration-300 placeholder-transparent"
+                            placeholder=" " />
+
+                        <label for="email"
+                            class="absolute left-4 text-white/60 text-base transition-all duration-300 origin-[0] peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-base peer-placeholder-shown:text-white/50 peer-not-placeholder-shown:top-3 peer-not-placeholder-shown:-translate-y-0 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-indigo-400 peer-focus:top-3 peer-focus:-translate-y-0 peer-focus:text-sm peer-focus:text-indigo-400 pointer-events-none">
+                            Email Address
+                        </label>
+                    </div>
+
+                    <div class="relative w-full group">
+                        <textarea id="message"
+                            class="peer w-full px-4 pt-8 pb-3 rounded-2xl border border-indigo-500/30 bg-transparent text-white outline-none focus:border-indigo-400 transition-all duration-300 min-h-[140px] placeholder-transparent resize-none"
+                            placeholder=" "></textarea>
+
+                        <label for="message"
+                            class="absolute left-4 text-white/60 text-base transition-all duration-300 origin-[0] peer-placeholder-shown:top-6 peer-placeholder-shown:-translate-y-0 peer-placeholder-shown:text-base peer-placeholder-shown:text-white/50 peer-not-placeholder-shown:top-3 peer-not-placeholder-shown:-translate-y-0 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-indigo-400 peer-focus:top-3 peer-focus:-translate-y-0 peer-focus:text-sm peer-focus:text-indigo-400 pointer-events-none">
+                            Describe...
+                        </label>
+                    </div>
+
+                    <div class="w-full relative">
+                        <button
+                            class="sticky inset-0 z-10 w-full bg-linear-to-r from-indigo-500 via-indigo-300 to-indigo-500 py-4 rounded-2xl cursor-pointer">
+                            Drop a line
+                        </button>
+
+                        <div class="absolute top-5 w-full h-10 bg-indigo-800 blur-[50px]"></div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full bg-[#101116] border-t border-[#0e1320]">
+        <div class="container mx-auto p-4 w-full lg:w-5xl flex flex-col ">
+            <div class="w-full flex justify-between items-center">
+                <span class="text-[90px] sm:text-[120px] lg:text-[200px] text-white font-bold">E</span>
+                <span class="text-[90px] sm:text-[120px] lg:text-[200px] text-white font-bold">D</span>
+                <span class="text-[90px] sm:text-[120px] lg:text-[200px] text-white font-bold">I</span>
+                <span class="text-[90px] sm:text-[120px] lg:text-[200px] text-white font-bold">T</span>
+                <span class="text-[90px] sm:text-[120px] lg:text-[200px] text-white font-bold">O</span>
+                <span class="text-[90px] sm:text-[120px] lg:text-[200px] text-white font-bold">R</span>
+            </div>
+
+            <div class="flex flex-col items-center gap-8">
+                <div class="space-x-4 mb-2">
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in text-white/50 hover:text-white duration-500"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-github text-white/50 hover:text-white duration-500"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter text-white/50 hover:text-white duration-500"></i>
+                    </a>
+                </div>
+
+                <span class="text-white/80 text-sm">©2026, All rights reserved.</span>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="js/logic.js"></script>
+
+</html>
